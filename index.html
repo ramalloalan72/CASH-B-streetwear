@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CA$H-B | Streetwear</title>
+    <meta name="description" content="CA$H-B streetwear: skate, rap y graffitti. Compra productos premium con carrito, talles y membresía VIP." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav">
+        <div class="brand" aria-label="CA$H-B">CA$H-B</div>
+
+        <nav class="nav-links" aria-label="Navegación principal">
+          <a href="#shop">Shop</a>
+          <a href="#drops">Drops</a>
+          <a href="#premium">Premium</a>
+          <a href="#sizes">Talles</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="ghost-btn">Login</button>
+          <button class="cart-button" id="cartToggle" aria-label="Abrir carrito">
+            Carrito <span id="cartCount">0</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <span class="eyebrow">Street • Skate • Culture</span>
+            <h1 class="brand brand-hero">CA$H-B</h1>
+            <p>
+              Ropa urbana creada para la calle, el skate y la energía del rap y el graffiti.
+              Colecciones con actitud, peso visual y autenticidad.
+            </p>
+            <div class="hero-actions">
+              <button class="primary-btn">Ver colección</button>
+              <button class="secondary-btn">Únete al club</button>
+            </div>
+            <div class="hero-stats">
+              <div>
+                <strong>24h</strong>
+                <span>Shipping</span>
+              </div>
+              <div>
+                <strong>42k</strong>
+                <span>Clientes</span>
+              </div>
+              <div>
+                <strong>12</strong>
+                <span>Drops</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="visual-card">
+              <div class="product-showcase">
+                <span class="tag">Nueva colección / 2026</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="shop">
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <span class="eyebrow small">Drop principal</span>
+              <h2>Streetwear intenso</h2>
+            </div>
+            <p>
+              Prendas con corte oversized, telas resistentes y estética urbana que mezclan grafiti, skyline y flow.
+            </p>
+          </div>
+
+          <div class="product-grid" id="productGrid"></div>
+        </div>
+      </section>
+
+      <section class="section premium" id="premium">
+        <div class="container premium-wrap">
+          <div class="premium-box">
+            <span class="eyebrow">Membresía premium</span>
+            <h3>Acceso VIP con drops anticipados</h3>
+            <p>
+              Sumate al club CA$H-B y recibí lanzamientos anticipados, descuentos exclusivos y acceso a ventas limitadas antes de salir al público.
+            </p>
+
+            <ul class="benefits">
+              <li>Preventa exclusiva antes de cada drop.</li>
+              <li>Ofertas privadas para miembros premium.</li>
+              <li>Descuentos en colecciones seleccionadas.</li>
+              <li>Acceso a stock limitado.</li>
+            </ul>
+
+            <form class="member-form">
+              <input type="text" placeholder="Nombre completo" />
+              <input type="email" placeholder="Correo electrónico" />
+              <button type="button" class="primary-btn">Quiero ser premium</button>
+            </form>
+          </div>
+
+          <div class="highlight-box">
+            <div class="highlight-tag">
+              <div class="brand brand-mini">CA$H-B</div>
+              <div class="vip-text">Club VIP</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section size-section" id="sizes">
+        <div class="container">
+          <div class="section-header left">
+            <div>
+              <span class="eyebrow small">Guía de talles</span>
+              <h2>Cómo elegir tu fit</h2>
+            </div>
+          </div>
+
+          <div class="size-guide-box">
+            <table>
+              <thead>
+                <tr>
+                  <th>Talla</th>
+                  <th>Pecho</th>
+                  <th>Cintura</th>
+                  <th>Fit</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>S</td><td>92 cm</td><td>76 cm</td><td>Regular</td></tr>
+                <tr><td>M</td><td>100 cm</td><td>82 cm</td><td>Oversized</td></tr>
+                <tr><td>L</td><td>108 cm</td><td>88 cm</td><td>Loose</td></tr>
+                <tr><td>XL</td><td>116 cm</td><td>94 cm</td><td>Oversized</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <aside class="cart-panel" id="cartPanel" aria-live="polite">
+      <div class="cart-header">
+        <h3>Tu carrito</h3>
+        <button id="closeCart" aria-label="Cerrar carrito">×</button>
+      </div>
+
+      <div id="cartItems" class="cart-items"></div>
+
+      <div class="cart-summary">
+        <div class="summary-row">
+          <span>Subtotal</span>
+          <strong id="subtotal">$0</strong>
+        </div>
+        <div class="summary-row">
+          <span>Envío</span>
+          <strong id="shipping">Gratis</strong>
+        </div>
+        <div class="summary-row total">
+          <span>Total</span>
+          <strong id="total">$0</strong>
+        </div>
+        <button class="primary-btn checkout-btn">Finalizar compra</button>
+      </div>
+    </aside>
+
+    <div class="backdrop" id="backdrop"></div>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div class="brand brand-footer">CA$H-B</div>
+        <span>© 2026 CA$H-B Streetwear</span>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
